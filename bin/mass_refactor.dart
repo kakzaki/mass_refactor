@@ -74,7 +74,7 @@ void _renameFile(File file, Map<String, String> keywordReplacements) {
     for (final entry in keywordReplacements.entries) {
       final keywordToReplace = entry.key;
       final replacementKeyword = entry.value;
-      final regex = RegExp(keywordToReplace, caseSensitive: false);
+      final regex = RegExp(keywordToReplace, caseSensitive: true);
       newFileName = newFileName.replaceAll(regex, replacementKeyword);
     }
     if (fileName != newFileName) {
@@ -94,7 +94,7 @@ void _renameFolder(
     for (final entry in keywordReplacements.entries) {
       final keywordToReplace = entry.key;
       final replacementKeyword = entry.value;
-      final regex = RegExp(keywordToReplace, caseSensitive: false);
+      final regex = RegExp(keywordToReplace, caseSensitive: true);
       newFolderName = newFolderName.replaceAll(regex, replacementKeyword);
     }
     if (folderName != newFolderName) {

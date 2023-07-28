@@ -10,7 +10,7 @@ String replaceKeywordsInContent(
   for (final entry in keywordReplacements.entries) {
     final keywordToReplace = entry.key;
     final replacementKeyword = entry.value;
-    final regex = RegExp(keywordToReplace, caseSensitive: false);
+    final regex = RegExp(keywordToReplace, caseSensitive: true);
     content = content.replaceAll(regex, replacementKeyword);
   }
   return content;
