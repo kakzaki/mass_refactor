@@ -4,18 +4,31 @@ import 'package:args/args.dart';
 void main(List<String> arguments) {
   final argParser = ArgParser();
   argParser.addOption('directory',
-      abbr: 'd', help: 'Target directory for mass refactoring');
+      abbr: 'd', help: 'Target directory for mass refactoring (optional)');
   argParser.addMultiOption('replace',
       abbr: 'r', help: 'Keyword replacements (e.g., Brand:Category)');
 
   final args = argParser.parse(arguments);
 
-  final targetDirectory = Directory(args['directory'] ?? '');
+  final targetDirectoryPath = args['directory'] ?? Directory.current.path;
+  final targetDirectory = Directory(targetDirectoryPath);
   final keywordReplacements = _parseKeywordReplacements(args['replace'] ?? []);
 
   if (targetDirectory.path.isEmpty || keywordReplacements.isEmpty) {
     print(
-        'Usage: dart mass_refactor.dart -d <directory> -r <keyword replacements>');
+        'Usage: mass_refactor -d <directory> -r <keyword replacements>');
+    print(
+        ' ');
+    print(
+        'Example 1: mass_refactor -d lib/feature/brand -r Brand:Category');
+    print(
+        'this will change all folder, file, content inside directory lib/feature/brand with keyword Brand to Category');
+    print(
+        ' ');
+    print(
+        'Example 2: mass_refactor -r Brand:Category');
+    print(
+        'this will change all folder, file, content inside current directory with keyword Brand to Category');    
     return;
   }
 
