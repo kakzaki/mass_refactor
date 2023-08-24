@@ -31,7 +31,7 @@ void main(List<String> arguments) {
   try {
     if (targetDirectory.existsSync()) {
       _renameFilesAndFolders(targetDirectory, keywordReplacements);
-      printLogoArt()
+      printSuccessArt();
       print('Mass refactor completed successfully.');
     } else {
       print('Error: Target directory not found.');

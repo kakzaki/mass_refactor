@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Fix error
+
 ## 1.0.4
 
 - Add logo art
