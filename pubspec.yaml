@@ -1,6 +1,6 @@
 name: mass_refactor
 description: A CLI tool for performing mass refactoring of files and folders.
-version: 1.0.3
+version: 1.0.4
 homepage: https://kakzaki.dev
 
 environment:

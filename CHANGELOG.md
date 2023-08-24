@@ -1,3 +1,7 @@
+## 1.0.4
+
+- Add logo art
+
 ## 1.0.3
 
 - Add default directory to current directory
