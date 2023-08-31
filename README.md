@@ -14,7 +14,7 @@ Imagine you have a project with hundreds of files and folders, and you need to u
 
 - Replace keywords in file and folder names.
 - Update keyword occurrences inside file contents.
-- Case-sensitive or case-insensitive keyword replacements.
+- Case-sensitive keyword replacements.
 - Recursively traverse subdirectories for refactoring.
 
 ## Installation
@@ -67,7 +67,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-If you have any questions or need further assistance, please don't hesitate to contact us at support@example.com.
+If you have any questions or need further assistance, please don't hesitate to contact us at kakzaki@gmail.com.
 
 Happy refactoring with Mass Refactor! 🚀
 ```
